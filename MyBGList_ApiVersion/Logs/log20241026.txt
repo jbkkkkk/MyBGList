@@ -1,0 +1,46 @@
+2024-10-26 11:48:07.590 +03:00 [INF] Now listening on: http://0.0.0.0:55221
+2024-10-26 11:48:07.621 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-26 11:48:07.622 +03:00 [INF] Hosting environment: Development
+2024-10-26 11:48:07.622 +03:00 [INF] Content root path: D:\MyProjects\MyBGList\MyBGList_ApiVersion
+2024-10-26 11:49:06.827 +03:00 [INF] Now listening on: http://localhost:55221
+2024-10-26 11:49:06.848 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-26 11:49:06.848 +03:00 [INF] Hosting environment: Development
+2024-10-26 11:49:06.849 +03:00 [INF] Content root path: D:\MyProjects\MyBGList\MyBGList_ApiVersion
+2024-10-26 11:49:19.201 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-10-26 11:49:22.552 +03:00 [INF] Get method started.
+2024-10-26 11:49:24.342 +03:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [BoardGames] AS [b]
+2024-10-26 11:49:25.869 +03:00 [INF] Executed DbCommand (91ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[BGGRank], [b].[ComplexityAverage], [b].[CreatedDate], [b].[LastModifiedDate], [b].[MaxPlayers], [b].[MinAge], [b].[MinPlayers], [b].[Name], [b].[OwnedUsers], [b].[PlayTime], [b].[RatingAverage], [b].[UserRated], [b].[Year]
+FROM [BoardGames] AS [b]
+ORDER BY [b].[Name]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2024-10-26 11:51:39.257 +03:00 [INF] Get method started.
+2024-10-26 11:51:39.380 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [BoardGames] AS [b]
+2024-10-26 11:51:39.473 +03:00 [INF] Executed DbCommand (88ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[BGGRank], [b].[ComplexityAverage], [b].[CreatedDate], [b].[LastModifiedDate], [b].[MaxPlayers], [b].[MinAge], [b].[MinPlayers], [b].[Name], [b].[OwnedUsers], [b].[PlayTime], [b].[RatingAverage], [b].[UserRated], [b].[Year]
+FROM [BoardGames] AS [b]
+ORDER BY [b].[Name]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2024-10-26 11:52:46.858 +03:00 [INF] Get method started.
+2024-10-26 11:52:46.895 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [BoardGames] AS [b]
+2024-10-26 11:52:46.996 +03:00 [INF] Executed DbCommand (89ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[BGGRank], [b].[ComplexityAverage], [b].[CreatedDate], [b].[LastModifiedDate], [b].[MaxPlayers], [b].[MinAge], [b].[MinPlayers], [b].[Name], [b].[OwnedUsers], [b].[PlayTime], [b].[RatingAverage], [b].[UserRated], [b].[Year]
+FROM [BoardGames] AS [b]
+ORDER BY [b].[Name]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+2024-10-26 11:53:49.762 +03:00 [INF] GetBoardGame method started.
+2024-10-26 11:53:49.816 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[BGGRank], [b].[ComplexityAverage], [b].[CreatedDate], [b].[LastModifiedDate], [b].[MaxPlayers], [b].[MinAge], [b].[MinPlayers], [b].[Name], [b].[OwnedUsers], [b].[PlayTime], [b].[RatingAverage], [b].[UserRated], [b].[Year]
+FROM [BoardGames] AS [b]
+WHERE [b].[Id] = @__id_0
+2024-10-26 11:53:58.756 +03:00 [INF] GetBoardGame method started.
+2024-10-26 11:53:58.760 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[BGGRank], [b].[ComplexityAverage], [b].[CreatedDate], [b].[LastModifiedDate], [b].[MaxPlayers], [b].[MinAge], [b].[MinPlayers], [b].[Name], [b].[OwnedUsers], [b].[PlayTime], [b].[RatingAverage], [b].[UserRated], [b].[Year]
+FROM [BoardGames] AS [b]
+WHERE [b].[Id] = @__id_0

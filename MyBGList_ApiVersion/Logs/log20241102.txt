@@ -1,0 +1,19 @@
+2024-11-02 01:04:17.172 +03:00 [INF] Now listening on: http://localhost:55221
+2024-11-02 01:04:17.200 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-02 01:04:17.201 +03:00 [INF] Hosting environment: Development
+2024-11-02 01:04:17.201 +03:00 [INF] Content root path: D:\MyProjects\MyBGList\MyBGList_ApiVersion
+2024-11-02 01:04:26.074 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-11-02 01:09:08.969 +03:00 [INF] Now listening on: http://localhost:55221
+2024-11-02 01:09:08.990 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-02 01:09:08.990 +03:00 [INF] Hosting environment: Development
+2024-11-02 01:09:08.990 +03:00 [INF] Content root path: D:\MyProjects\MyBGList\MyBGList_ApiVersion
+2024-11-02 01:09:22.358 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-11-02 01:10:24.925 +03:00 [INF] Get method started.
+2024-11-02 01:10:25.524 +03:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [BoardGames] AS [b]
+2024-11-02 01:10:26.344 +03:00 [INF] Executed DbCommand (81ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[BGGRank], [b].[ComplexityAverage], [b].[CreatedDate], [b].[LastModifiedDate], [b].[MaxPlayers], [b].[MinAge], [b].[MinPlayers], [b].[Name], [b].[OwnedUsers], [b].[PlayTime], [b].[RatingAverage], [b].[UserRated], [b].[Year]
+FROM [BoardGames] AS [b]
+ORDER BY [b].[Name]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY

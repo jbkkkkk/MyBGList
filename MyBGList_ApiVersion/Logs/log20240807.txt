@@ -1,0 +1,270 @@
+2024-08-07 13:34:19.714 +03:00 [INF] Now listening on: http://localhost:55221
+2024-08-07 13:34:19.746 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-07 13:34:19.767 +03:00 [INF] Hosting environment: Development
+2024-08-07 13:34:19.769 +03:00 [INF] Content root path: D:\MyProjects\MyBGList\MyBGList_ApiVersion
+2024-08-07 13:34:20.378 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-08-07 13:34:21.177 +03:00 [INF] Get method started.
+2024-08-07 13:34:21.957 +03:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [BoardGames] AS [b]
+2024-08-07 13:34:23.053 +03:00 [INF] Executed DbCommand (73ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[BGGRank], [b].[ComplexityAverage], [b].[CreatedDate], [b].[LastModifiedDate], [b].[MaxPlayers], [b].[MinAge], [b].[MinPlayers], [b].[Name], [b].[OwnedUsers], [b].[PlayTime], [b].[RatingAverage], [b].[UserRated], [b].[Year]
+FROM [BoardGames] AS [b]
+ORDER BY [b].[Name]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2024-08-07 13:34:31.987 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Mechanics] AS [m]
+2024-08-07 13:34:57.653 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[CreatedDate], [m].[LastModifiedDate], [m].[Name]
+FROM [Mechanics] AS [m]
+ORDER BY [m].[Name]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2024-08-07 13:35:01.485 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Mechanics] AS [m]
+2024-08-07 13:35:04.133 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Mechanics] AS [m]
+2024-08-07 13:37:19.213 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Mechanics] AS [m]
+2024-08-07 13:37:23.878 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[CreatedDate], [m].[LastModifiedDate], [m].[Name]
+FROM [Mechanics] AS [m]
+ORDER BY [m].[Name]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2024-08-07 18:31:05.445 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-08-07 18:31:05.484 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-08-07 18:31:05.486 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-08-07 18:31:05.488 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-08-07 18:31:05.503 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-08-07 18:31:05.516 +03:00 [INF] Applying migration '20240725140425_Chapter4_Exercises'.
+2024-08-07 18:31:05.591 +03:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Mechanics] ADD [Flags] int NOT NULL DEFAULT 0;
+2024-08-07 18:31:05.599 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Mechanics] ADD [Notes] nvarchar(200) NOT NULL DEFAULT N'';
+2024-08-07 18:31:05.606 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Domains] ADD [Flags] int NOT NULL DEFAULT 0;
+2024-08-07 18:31:05.610 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Domains] ADD [Notes] nvarchar(200) NOT NULL DEFAULT N'';
+2024-08-07 18:31:05.688 +03:00 [INF] Executed DbCommand (77ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [BoardGames] ADD [AlternateNames] nvarchar(200) NOT NULL DEFAULT N'';
+2024-08-07 18:31:05.769 +03:00 [INF] Executed DbCommand (81ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [BoardGames] ADD [Designer] nvarchar(200) NOT NULL DEFAULT N'';
+2024-08-07 18:31:05.836 +03:00 [INF] Executed DbCommand (67ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [BoardGames] ADD [Flags] int NOT NULL DEFAULT 0;
+2024-08-07 18:31:05.905 +03:00 [INF] Executed DbCommand (69ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [BoardGames] ADD [PublisherId] int NOT NULL DEFAULT 0;
+2024-08-07 18:31:05.913 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Categories] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(200) NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    CONSTRAINT [PK_Categories] PRIMARY KEY ([Id])
+);
+2024-08-07 18:31:05.916 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Publishers] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(200) NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    CONSTRAINT [PK_Publishers] PRIMARY KEY ([Id])
+);
+2024-08-07 18:31:05.921 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [BoardGames_Categories] (
+    [BoardGameId] int NOT NULL,
+    [CategoryId] int NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    CONSTRAINT [PK_BoardGames_Categories] PRIMARY KEY ([BoardGameId], [CategoryId]),
+    CONSTRAINT [FK_BoardGames_Categories_BoardGames_BoardGameId] FOREIGN KEY ([BoardGameId]) REFERENCES [BoardGames] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_BoardGames_Categories_Categories_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Categories] ([Id]) ON DELETE CASCADE
+);
+2024-08-07 18:31:05.966 +03:00 [INF] Executed DbCommand (44ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_BoardGames_PublisherId] ON [BoardGames] ([PublisherId]);
+2024-08-07 18:31:05.968 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_BoardGames_Categories_CategoryId] ON [BoardGames_Categories] ([CategoryId]);
+2024-08-07 18:31:06.227 +03:00 [ERR] Failed executing DbCommand (258ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [BoardGames] ADD CONSTRAINT [FK_BoardGames_Publishers_PublisherId] FOREIGN KEY ([PublisherId]) REFERENCES [Publishers] ([Id]) ON DELETE CASCADE;
+2024-08-07 18:32:38.242 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-08-07 18:32:38.290 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-08-07 18:32:38.293 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-08-07 18:32:38.294 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-08-07 18:32:38.305 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-08-07 18:32:38.318 +03:00 [INF] Applying migration '20240725140425_Chapter4_Exercises'.
+2024-08-07 18:32:38.363 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Mechanics] ADD [Flags] int NOT NULL DEFAULT 0;
+2024-08-07 18:32:38.366 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Mechanics] ADD [Notes] nvarchar(200) NOT NULL DEFAULT N'';
+2024-08-07 18:32:38.381 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Domains] ADD [Flags] int NOT NULL DEFAULT 0;
+2024-08-07 18:32:38.385 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Domains] ADD [Notes] nvarchar(200) NOT NULL DEFAULT N'';
+2024-08-07 18:32:38.450 +03:00 [INF] Executed DbCommand (65ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [BoardGames] ADD [AlternateNames] nvarchar(200) NOT NULL DEFAULT N'';
+2024-08-07 18:32:38.500 +03:00 [INF] Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [BoardGames] ADD [Designer] nvarchar(200) NOT NULL DEFAULT N'';
+2024-08-07 18:32:38.562 +03:00 [INF] Executed DbCommand (61ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [BoardGames] ADD [Flags] int NOT NULL DEFAULT 0;
+2024-08-07 18:32:38.618 +03:00 [INF] Executed DbCommand (56ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [BoardGames] ADD [PublisherId] int NOT NULL DEFAULT 0;
+2024-08-07 18:32:38.621 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Categories] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(200) NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    CONSTRAINT [PK_Categories] PRIMARY KEY ([Id])
+);
+2024-08-07 18:32:38.623 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Publishers] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(200) NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    CONSTRAINT [PK_Publishers] PRIMARY KEY ([Id])
+);
+2024-08-07 18:32:38.627 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [BoardGames_Categories] (
+    [BoardGameId] int NOT NULL,
+    [CategoryId] int NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    CONSTRAINT [PK_BoardGames_Categories] PRIMARY KEY ([BoardGameId], [CategoryId]),
+    CONSTRAINT [FK_BoardGames_Categories_BoardGames_BoardGameId] FOREIGN KEY ([BoardGameId]) REFERENCES [BoardGames] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_BoardGames_Categories_Categories_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Categories] ([Id]) ON DELETE CASCADE
+);
+2024-08-07 18:32:38.648 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_BoardGames_PublisherId] ON [BoardGames] ([PublisherId]);
+2024-08-07 18:32:38.650 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_BoardGames_Categories_CategoryId] ON [BoardGames_Categories] ([CategoryId]);
+2024-08-07 18:32:38.881 +03:00 [ERR] Failed executing DbCommand (230ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [BoardGames] ADD CONSTRAINT [FK_BoardGames_Publishers_PublisherId] FOREIGN KEY ([PublisherId]) REFERENCES [Publishers] ([Id]) ON DELETE CASCADE;
+2024-08-07 18:37:32.643 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-08-07 18:37:32.700 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-08-07 18:37:32.703 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-08-07 18:37:32.704 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-08-07 18:37:32.719 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-08-07 18:37:32.740 +03:00 [INF] No migrations were applied. The database is already up to date.
+2024-08-07 18:41:01.952 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-08-07 18:41:01.993 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-08-07 18:41:01.995 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-08-07 18:41:01.996 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-08-07 18:41:02.008 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-08-07 18:41:02.024 +03:00 [INF] Applying migration '20240807154021_Identity'.
+2024-08-07 18:41:02.072 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+);
+2024-08-07 18:41:02.076 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUsers] (
+    [Id] nvarchar(450) NOT NULL,
+    [UserName] nvarchar(256) NULL,
+    [NormalizedUserName] nvarchar(256) NULL,
+    [Email] nvarchar(256) NULL,
+    [NormalizedEmail] nvarchar(256) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_AspNetUsers] PRIMARY KEY ([Id])
+);
+2024-08-07 18:41:02.079 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetRoleClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoleClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetRoleClaims_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE
+);
+2024-08-07 18:41:02.083 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetUserClaims_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2024-08-07 18:41:02.089 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserLogins] (
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [ProviderKey] nvarchar(450) NOT NULL,
+    [ProviderDisplayName] nvarchar(max) NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetUserLogins] PRIMARY KEY ([LoginProvider], [ProviderKey]),
+    CONSTRAINT [FK_AspNetUserLogins_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2024-08-07 18:41:02.092 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserRoles] (
+    [UserId] nvarchar(450) NOT NULL,
+    [RoleId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetUserRoles] PRIMARY KEY ([UserId], [RoleId]),
+    CONSTRAINT [FK_AspNetUserRoles_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_AspNetUserRoles_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2024-08-07 18:41:02.095 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserTokens] (
+    [UserId] nvarchar(450) NOT NULL,
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [Name] nvarchar(450) NOT NULL,
+    [Value] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserTokens] PRIMARY KEY ([UserId], [LoginProvider], [Name]),
+    CONSTRAINT [FK_AspNetUserTokens_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2024-08-07 18:41:02.097 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetRoleClaims_RoleId] ON [AspNetRoleClaims] ([RoleId]);
+2024-08-07 18:41:02.099 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [RoleNameIndex] ON [AspNetRoles] ([NormalizedName]) WHERE [NormalizedName] IS NOT NULL;
+2024-08-07 18:41:02.101 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserClaims_UserId] ON [AspNetUserClaims] ([UserId]);
+2024-08-07 18:41:02.103 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserLogins_UserId] ON [AspNetUserLogins] ([UserId]);
+2024-08-07 18:41:02.104 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserRoles_RoleId] ON [AspNetUserRoles] ([RoleId]);
+2024-08-07 18:41:02.106 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [EmailIndex] ON [AspNetUsers] ([NormalizedEmail]);
+2024-08-07 18:41:02.108 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [UserNameIndex] ON [AspNetUsers] ([NormalizedUserName]) WHERE [NormalizedUserName] IS NOT NULL;
+2024-08-07 18:41:02.110 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240807154021_Identity', N'8.0.7');

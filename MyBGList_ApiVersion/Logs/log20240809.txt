@@ -1,0 +1,235 @@
+2024-08-09 00:44:58.846 +03:00 [INF] Application is shutting down...
+2024-08-09 00:45:10.985 +03:00 [INF] Now listening on: http://localhost:55221
+2024-08-09 00:45:11.017 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-09 00:45:11.019 +03:00 [INF] Hosting environment: Development
+2024-08-09 00:45:11.021 +03:00 [INF] Content root path: D:\MyProjects\MyBGList\MyBGList_ApiVersion
+2024-08-09 00:45:11.831 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-08-09 00:45:12.028 +03:00 [INF] Get method started.
+2024-08-09 00:45:12.778 +03:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [BoardGames] AS [b]
+2024-08-09 00:45:13.371 +03:00 [INF] Executed DbCommand (75ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[BGGRank], [b].[ComplexityAverage], [b].[CreatedDate], [b].[LastModifiedDate], [b].[MaxPlayers], [b].[MinAge], [b].[MinPlayers], [b].[Name], [b].[OwnedUsers], [b].[PlayTime], [b].[RatingAverage], [b].[UserRated], [b].[Year]
+FROM [BoardGames] AS [b]
+ORDER BY [b].[Name]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2024-08-09 00:47:05.931 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-08-09 00:47:06.057 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTimeOffset), @p7='?' (Size = 256), @p8='?' (Size = 256), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+2024-08-09 00:47:06.069 +03:00 [INF] User TestModerator test-moderator@email.com has been created.
+2024-08-09 00:48:06.211 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-08-09 00:48:06.230 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTimeOffset), @p7='?' (Size = 256), @p8='?' (Size = 256), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+2024-08-09 00:48:06.233 +03:00 [INF] User TestAdministrator test-administrator@email.com has been created.
+2024-08-09 00:48:42.867 +03:00 [INF] Application is shutting down...
+2024-08-09 12:00:31.950 +03:00 [INF] Now listening on: http://localhost:55221
+2024-08-09 12:00:31.984 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-09 12:00:31.986 +03:00 [INF] Hosting environment: Development
+2024-08-09 12:00:31.988 +03:00 [INF] Content root path: D:\MyProjects\MyBGList\MyBGList_ApiVersion
+2024-08-09 12:00:32.670 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-08-09 12:00:32.930 +03:00 [INF] Get method started.
+2024-08-09 12:00:33.721 +03:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [BoardGames] AS [b]
+2024-08-09 12:00:34.306 +03:00 [INF] Executed DbCommand (80ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[BGGRank], [b].[ComplexityAverage], [b].[CreatedDate], [b].[LastModifiedDate], [b].[MaxPlayers], [b].[MinAge], [b].[MinPlayers], [b].[Name], [b].[OwnedUsers], [b].[PlayTime], [b].[RatingAverage], [b].[UserRated], [b].[Year]
+FROM [BoardGames] AS [b]
+ORDER BY [b].[Name]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2024-08-09 12:02:20.019 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-08-09 12:02:53.001 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-08-09 12:02:53.013 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-08-09 12:02:53.099 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3);
+2024-08-09 12:02:53.127 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-08-09 12:02:53.133 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-08-09 12:02:53.139 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3);
+2024-08-09 12:02:53.146 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-08-09 12:02:53.161 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-08-09 12:02:53.186 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2024-08-09 12:02:53.191 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-08-09 12:02:53.195 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2024-08-09 12:02:53.201 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-08-09 12:02:53.222 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-08-09 12:02:53.284 +03:00 [INF] Executed DbCommand (23ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p16='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p17='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+OUTPUT 1
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+2024-08-09 12:02:53.301 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-08-09 12:02:53.309 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-08-09 12:02:53.315 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2024-08-09 12:02:53.321 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-08-09 12:02:53.325 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2024-08-09 12:02:53.329 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-08-09 12:02:53.335 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-08-09 12:02:53.342 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p16='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p17='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+OUTPUT 1
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+2024-08-09 12:02:53.347 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-08-09 12:02:53.354 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2024-08-09 12:02:53.357 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-08-09 12:02:53.363 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-08-09 12:02:53.369 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p16='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p17='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+OUTPUT 1
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+2024-08-09 22:57:45.726 +03:00 [INF] Now listening on: http://localhost:55221
+2024-08-09 22:57:45.756 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-09 22:57:45.759 +03:00 [INF] Hosting environment: Development
+2024-08-09 22:57:45.761 +03:00 [INF] Content root path: D:\MyProjects\MyBGList\MyBGList_ApiVersion
+2024-08-09 22:57:46.405 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-08-09 22:57:47.645 +03:00 [INF] Get method started.
+2024-08-09 22:57:48.470 +03:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [BoardGames] AS [b]
+2024-08-09 22:57:49.478 +03:00 [INF] Executed DbCommand (36ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[BGGRank], [b].[ComplexityAverage], [b].[CreatedDate], [b].[LastModifiedDate], [b].[MaxPlayers], [b].[MinAge], [b].[MinPlayers], [b].[Name], [b].[OwnedUsers], [b].[PlayTime], [b].[RatingAverage], [b].[UserRated], [b].[Year]
+FROM [BoardGames] AS [b]
+ORDER BY [b].[Name]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2024-08-09 22:58:54.409 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-08-09 22:58:54.820 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-08-09 23:00:37.955 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-08-09 23:00:38.151 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-08-09 23:01:46.263 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-08-09 23:01:46.476 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-08-09 23:02:20.889 +03:00 [INF] Application is shutting down...
+2024-08-09 23:26:30.390 +03:00 [INF] Now listening on: http://localhost:55221
+2024-08-09 23:26:30.417 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-09 23:26:30.420 +03:00 [INF] Hosting environment: Development
+2024-08-09 23:26:30.422 +03:00 [INF] Content root path: D:\MyProjects\MyBGList\MyBGList_ApiVersion
+2024-08-09 23:26:31.417 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-08-09 23:26:34.249 +03:00 [INF] Get method started.
+2024-08-09 23:26:35.042 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [BoardGames] AS [b]
+2024-08-09 23:26:36.591 +03:00 [INF] Executed DbCommand (94ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[BGGRank], [b].[ComplexityAverage], [b].[CreatedDate], [b].[LastModifiedDate], [b].[MaxPlayers], [b].[MinAge], [b].[MinPlayers], [b].[Name], [b].[OwnedUsers], [b].[PlayTime], [b].[RatingAverage], [b].[UserRated], [b].[Year]
+FROM [BoardGames] AS [b]
+ORDER BY [b].[Name]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2024-08-09 23:26:57.054 +03:00 [INF] GetBoardGame method started.
+2024-08-09 23:26:57.118 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[BGGRank], [b].[ComplexityAverage], [b].[CreatedDate], [b].[LastModifiedDate], [b].[MaxPlayers], [b].[MinAge], [b].[MinPlayers], [b].[Name], [b].[OwnedUsers], [b].[PlayTime], [b].[RatingAverage], [b].[UserRated], [b].[Year]
+FROM [BoardGames] AS [b]
+WHERE [b].[Id] = @__id_0
+2024-08-09 23:27:11.828 +03:00 [INF] Application is shutting down...

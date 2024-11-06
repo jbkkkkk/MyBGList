@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+    dotnet-app:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      ports:
+      - "8080:8080"
+      depends_on:
+      - db
+    db:
+      image: mcr.microsoft.com/mssql/server:2022-latest
+      environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Pass@word
+      expose:
+      - "1433"
+      ports:
+      - "1433:1433"
+networks:
+  default:
+    driver: bridge
